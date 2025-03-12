@@ -1,7 +1,7 @@
 FROM node:22.12-alpine AS builder
 
 # Must be entire project because `prepare` script is run during `npm install` and requires all files.
-COPY mcp-github /github /app
+COPY . /app
 COPY tsconfig.json /tsconfig.json
 
 WORKDIR /app
